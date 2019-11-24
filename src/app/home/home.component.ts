@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   }
 
   createGame() {
-    this.dataService.savePlayerId(Math.random() * 10000);
+    this.dataService.savePlayerId(+(Math.random() * 10000).toFixed(0));
     this.dataService.setServerIp(this.serverIp);
     this.dataService.getGameIdFromServer();
     this.router.navigate(['/cardselect']);

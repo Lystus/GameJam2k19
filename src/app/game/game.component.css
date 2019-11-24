@@ -1,0 +1,19 @@
+.monsterField{
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 2px;
+  margin: 2px;
+  display: inline-block;
+  width: 500px;
+  height: 200px;
+}
+
+.attackField{
+  background-color: salmon;
+  width: 500px;
+  height: 200px;
+  border: 1px solid black;
+  padding: 2px;
+  margin: 2px;
+  display: inline-block;
+}

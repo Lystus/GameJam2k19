@@ -56,7 +56,7 @@ export class DataService {
     }).subscribe();
   }
   getEnemyChoosenCards() {
-    this.http.get(`http://${this.serverIp}:8080/session/getGameInfo${this.currentGameId}`).subscribe(data => {
+    this.http.get(`http://${this.serverIp}:8080/session/getGameInfo/${this.currentGameId}`).subscribe(data => {
       if (data['player1Id'] === this.playerId) {
         console.log(data['player2Cards']);
         return data['player2Cards'];

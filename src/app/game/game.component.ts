@@ -12,8 +12,9 @@ export class GameComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    console.log("hit");
     this.myPlayerCard = this.dataService.playerCards;
-    //console.log(this.dataService.getEnemyChoosenCards());
+    console.log(this.dataService.getEnemyChoosenCards());
   }
 
 }
