@@ -1,51 +1,54 @@
-<div class="container">
+<div class="container d-flex flex-lg-wrap">
 
-  <div class="card" style="width: 18rem;">
-    <img src="src/assets/1.png" class="card-img-top" alt="...">
+  <div class="card" style="width: 18rem;" (click)="selectCard(1)">
+    <img src="../assets/1.png" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Coolosauros</h5>
       <p class="card-text">He is too cool for everything, he will never have attack below zero</p>
       <a class="btn btn-primary">5 Attack points</a>
     </div>
   </div>
-  <div class="card" style="width: 18rem;">
-    <img src="src/assets/2.jpg" class="card-img-top" alt="...">
+  <div class="card" style="width: 18rem;" (click)="selectCard(2)">
+    <img src="../assets/2.jpg" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Vehicleraptus</h5>
       <p class="card-text">He was born because a dino and a car really really really love each other. He has the potential to reach the speed of light. Once a plus attack is placed on him, he will get 3 attack points more</p>
       <a class="btn btn-primary">2 Attack points</a>
     </div>
   </div>
-  <div class="card" style="width: 18rem;">
-    <img src="src/assets/3.jpg" class="card-img-top" alt="...">
+  <div class="card" style="width: 18rem;" (click)="selectCard(3)">
+    <img src="../assets/3.jpg" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Hellaciraptos</h5>
       <p class="card-text">A nightmare being. He escaped from the highway to hell and devour everything on the stairway to heaven. Every odd plus attack below 6 has the double effect on him </p>
       <a class="btn btn-primary">3 Attack points</a>
     </div>
   </div>
-  <div class="card" style="width: 18rem;">
-    <img src="src/assets/1.png" class="card-img-top" alt="...">
+  <div class="card" style="width: 18rem;" (click)="selectCard(4)">
+    <img src="../assets/4.png" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Coolosauros</h5>
-      <p class="card-text">He is too cool for everything, he will never have attack below zero</p>
+      <h5 class="card-title">Spikekalosaurus</h5>
+      <p class="card-text">A terifying monster. He will destroy everything on his way, friends and foe. Every even number has the double effect on him, but once a odd number is on him he will attack his owner</p>
+      <a class="btn btn-primary">6 Attack points</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;" (click)="selectCard(5)">
+    <img src="../assets/5.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Longiciraptus</h5>
+      <p class="card-text">He is really long. Trust us, we measured it as you can see. If the cards with the number 5,6,7,8 and 9 are played on him, his attack will be doubled by the end of your turn.</p>
       <a class="btn btn-primary">5 Attack points</a>
     </div>
   </div>
-  <div class="card" style="width: 18rem;">
-    <img src="src/assets/1.png" class="card-img-top" alt="...">
+  <div class="card" style="width: 18rem;" (click)="selectCard(6)">
+    <img src="../assets/6.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Coolosauros</h5>
-      <p class="card-text">He is too cool for everything, he will never have attack below zero</p>
-      <a class="btn btn-primary">5 Attack points</a>
-    </div>
-  </div>
-  <div class="card" style="width: 18rem;">
-    <img src="src/assets/1.png" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Coolosauros</h5>
-      <p class="card-text">He is too cool for everything, he will never have attack below zero</p>
-      <a class="btn btn-primary">5 Attack points</a>
+      <h5 class="card-title">Romanian T-Rex</h5>
+      <p class="card-text">Trained by the Romanian King Stefanus of Tiarus, the Romanian T-Rex has the ability to steal half the attack points from the enemy when the sum is odd.</p>
+      <a class="btn btn-primary">3 Attack points</a>
     </div>
   </div>
 </div>
+<p>{{gameId}}</p>
+<button class="btn btn-primary" (click)="startGame()">Start game</button>
+<button class="btn btn-primary" (click)="showGameId()" > Show gameID</button>

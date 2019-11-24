@@ -8,7 +8,7 @@ import {DataService} from '../DataService';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  serverIp = '456';
+  serverIp = '10.201.63.77';
   gameId = '123';
 
   constructor(private router: Router, private dataService: DataService) { }
@@ -16,11 +16,14 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  createGame(): number {
-    //this.dataService.savePlayerId('awdwd' + Math.random() * 10);
-    //this.dataService.setServerIp(this.serverIp);
-    //this.dataService.getGameIdFromServer();
-    //this.router.navigate(['/cardsselect']);
-    return 1;
+  createGame() {
+    this.dataService.savePlayerId(Math.random() * 10000);
+    this.dataService.setServerIp(this.serverIp);
+    this.dataService.getGameIdFromServer();
+    this.router.navigate(['/cardselect']);
+  }
+
+  searchButton() {
+    console.log(this.dataService.getGameData());
   }
 }

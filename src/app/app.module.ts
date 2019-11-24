@@ -9,18 +9,21 @@ import {Routes, RouterModule} from '@angular/router';
 import { CardSelectComponent } from './card-select/card-select.component';
 import {DataService} from './DataService';
 import { HttpClientModule } from '@angular/common/http';
+import { GameComponent } from './game/game.component';
 
 const routes: Routes = [
   {path: 'home' , component: HomeComponent},
   {path : '', redirectTo: '/home', pathMatch: 'full'},
-  {path: 'cardselect' , component: CardSelectComponent}
+  {path: 'cardselect' , component: CardSelectComponent},
+  {path: 'game' , component: GameComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CardSelectComponent
+    CardSelectComponent,
+    GameComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,7 @@ const routes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [DataService],
+  providers: [],
   exports: [
     RouterModule
   ],

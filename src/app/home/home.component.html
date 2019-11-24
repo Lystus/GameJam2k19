@@ -11,13 +11,13 @@
       </div-->
       <input type="text" class="form-control" placeholder="Server ip address" aria-label="server" aria-describedby="basic-addon1" [(ngModel)]="serverIp">
     </div>
-    <button type="success" class="btn btn-primary btn-block" cli>
+    <button type="success" class="btn btn-primary btn-block" (click)="createGame()">
       Create game
     </button>
     <div class="input-group mb-3">
       <input type="text" class="form-control" placeholder="Game id" aria-label="server" aria-describedby="basic-addon1" [(ngModel)]="gameId">
     </div>
-    <button type="success" class="btn btn-primary btn-block">
+    <button type="success" class="btn btn-primary btn-block" (click)="searchButton()">
       Enter game
     </button>
     <p>{{serverIp+" - "+gameId}}</p>
