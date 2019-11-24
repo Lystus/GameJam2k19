@@ -17,10 +17,10 @@ export class HomeComponent implements OnInit {
   }
 
   createGame(): number {
-    this.dataService.savePlayerId('awdwd' + Math.random() * 10);
-    this.dataService.setServerIp(this.serverIp);
-    this.dataService.getGameIdFromServer();
-    this.router.navigate(['/cardsselect']);
+    //this.dataService.savePlayerId('awdwd' + Math.random() * 10);
+    //this.dataService.setServerIp(this.serverIp);
+    //this.dataService.getGameIdFromServer();
+    //this.router.navigate(['/cardsselect']);
     return 1;
   }
 }

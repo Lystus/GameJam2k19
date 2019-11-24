@@ -7,11 +7,13 @@ import {AlertModule} from 'ngx-bootstrap';
 import {FormsModule} from '@angular/forms';
 import {Routes, RouterModule} from '@angular/router';
 import { CardSelectComponent } from './card-select/card-select.component';
+import {DataService} from './DataService';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {path: 'home' , component: HomeComponent},
   {path : '', redirectTo: '/home', pathMatch: 'full'},
-  {path: 'cardselect/:id' , component: CardSelectComponent}
+  {path: 'cardselect' , component: CardSelectComponent}
 ];
 
 @NgModule({
@@ -24,9 +26,10 @@ const routes: Routes = [
     BrowserModule,
     AlertModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [DataService],
   exports: [
     RouterModule
   ],

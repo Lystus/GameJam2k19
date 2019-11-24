@@ -1,8 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
-@Injectable({providedIn: 'root'})
-
+@Injectable()
 export class DataService {
   currentGameId: string;
   serverIp: string;
@@ -27,12 +26,12 @@ export class DataService {
   sendPlayerId() {
     this.http.post(this.serverIp , this.playerId);
   }
-  getGameIdFromServer() {
-    this.http.post(`${this.serverIp}:8080/session/generate`, {
-      playerId: this.playerId
-    }).subscribe( data => this.gameIdData = data);
-    this.setGameId(this.gameIdData.gameId);
-  }
+  // getGameIdFromServer() {
+  //   this.http.post(`${this.serverIp}:8080/session/generate`, {
+  //     playerId: this.playerId
+  //   }).subscribe( data => this.gameIdData = data);
+  //   this.setGameId(this.gameIdData.gameId);
+  // }
   sendCards() {
 
   }
