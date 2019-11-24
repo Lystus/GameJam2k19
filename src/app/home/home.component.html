@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="text-center">
+    <h1 >The ultimate and super cool Dinosaurs trading card game</h1>
+  </div>
+
+
+  <div class="d-flex flex-column">
+    <div class="input-group mb-3">
+      <!--div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Server ip</span>
+      </div-->
+      <input type="text" class="form-control" placeholder="Server ip address" aria-label="server" aria-describedby="basic-addon1" [(ngModel)]="serverIp">
+    </div>
+    <button type="success" class="btn btn-primary btn-block" cli>
+      Create game
+    </button>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Game id" aria-label="server" aria-describedby="basic-addon1" [(ngModel)]="gameId">
+    </div>
+    <button type="success" class="btn btn-primary btn-block">
+      Enter game
+    </button>
+    <p>{{serverIp+" - "+gameId}}</p>
+  </div>
+
+</div>
+
+
